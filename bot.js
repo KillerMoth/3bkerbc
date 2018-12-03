@@ -158,15 +158,26 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
 
-            برودكاست عادي : ={prefix}bc
-            دعوة البوت لسيرفرك : ={prefix}invite
-            معلومات عن السيرفر : ={prefix}server
-            برودكاست للأونلاين فقط : ={prefix}bco
+            برودكاست عادي : ${prefix}bc
+            دعوة البوت لسيرفرك : ${prefix}invite
+            معلومات عن السيرفر : ${prefix}server
+            برودكاست للأونلاين فقط : ${prefix}bco
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             رابط سيرفر الدعم الفني : https://discord.gg/Tw6XtYp 
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
+});
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : EX Clan`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`=bc |3bker Broadcast`,"http://twitch.tv/Death Shop")
+client.user.setStatus("dnd")
 });
 
 // DONE BY MOORZ .
